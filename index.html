@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALBURAAQ E GLOBAL (PRIVATE) LIMITED — App & Web Development</title>
+  <meta name="description" content="ALBURAAQ E GLOBAL — Professional app & web development, UI/UX, SEO and digital services. SECP & DUNS registered. Build scalable, high-quality apps and web solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#1F4E79" />
+
+  <!-- Basic styles -->
+  <style>
+    :root{
+      --primary:#1F4E79; /* Royal Blue */
+      --accent:#C0C0C0;  /* Silver/Grey */
+      --bg:#ffffff;
+      --muted:#6B7280;
+      --radius:10px;
+      --max-width:1100px;
+      --container-padding:24px;
+      font-family: 'Inter', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#1f2937}
+    a{color:var(--primary);text-decoration:none}
+    header{position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:saturate(120%) blur(6px);box-shadow:0 1px 8px rgba(31,78,121,0.06);z-index:40}
+    .wrap{max-width:var(--max-width);margin:0 auto;padding:0 var(--container-padding)}
+
+    /* NAV */
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#2B6B9B);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:Poppins}
+    nav ul{display:flex;gap:18px;align-items:center;list-style:none;margin:0;padding:0}
+    nav li{font-weight:600}
+    .cta{background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;font-weight:600}
+    .ghost{border:1px solid var(--accent);padding:8px 12px;border-radius:8px}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:64px 0}
+    .hero h1{font-size:34px;margin:0 0 14px;color:var(--primary);font-family:Poppins}
+    .hero p{margin:0 0 20px;color:var(--muted);line-height:1.6}
+    .hero .actions{display:flex;gap:12px}
+    .card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 24px rgba(31,78,121,0.06)}
+
+    /* Services row */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .service{padding:18px;border-radius:10px;border:1px solid #f0f2f5}
+    .service h4{margin:8px 0}
+    .icon{width:48px;height:48px;border-radius:10px;background:#f3f7fb;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary)}
+
+    /* Portfolio */
+    .portfolio{margin:48px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .proj{background:linear-gradient(180deg,#ffffff,#fbfdff);border-radius:10px;padding:14px;border:1px solid #eef3f8}
+    .proj h5{margin:0 0 6px}
+    .proj p{margin:0;color:var(--muted);font-size:14px}
+
+    /* About */
+    .about{display:flex;gap:28px;align-items:center;padding:48px 0}
+    .about img{width:100%;border-radius:12px;object-fit:cover}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:24px}
+    form{display:flex;flex-direction:column;gap:12px}
+    input,textarea,select{padding:12px;border-radius:8px;border:1px solid #e6eef6;font-size:15px}
+    button[type=submit]{background:var(--primary);color:#fff;padding:12px;border-radius:8px;border:0;font-weight:700}
+
+    /* Testimonials */
+    .testimonials{display:flex;gap:12px}
+    .t-card{padding:16px;border-radius:10px;background:#fbfcff;border:1px solid #eef3f8}
+
+    /* Footer */
+    footer{margin-top:44px;padding:28px 0;border-top:1px solid #f2f4f6}
+    .footer-grid{display:flex;justify-content:space-between;align-items:center;gap:12px}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .portfolio .grid{grid-template-columns:repeat(2,1fr)}
+      .services{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      nav ul{display:none}
+      .mobile-menu{display:block}
+    }
+    @media (max-width:520px){
+      .portfolio .grid{grid-template-columns:1fr}
+      .hero h1{font-size:26px}
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav" role="navigation" aria-label="Main navigation">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">AE</div>
+      <div>
+        <div style="font-weight:700;">ALBURAAQ E GLOBAL</div>
+        <div style="font-size:12px;color:var(--muted)">(PRIVATE) LIMITED</div>
+      </div>
+    </div>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+      </ul>
+    </nav>
+
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="ghost" href="tel:+923468654889" aria-label="Call us">+92 346 865 4889</a>
+      <a class="cta" href="#contact">Start Your Project</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="wrap hero" aria-labelledby="hero-title">
+    <div>
+      <h1 id="hero-title">Innovative Apps, Cutting-Edge Web Solutions & Digital Excellence</h1>
+      <p>ALBURAAQ E GLOBAL (PRIVATE) LIMITED builds high-quality mobile apps and web platforms for startups and enterprises. SECP & DUNS registered — trusted, secure, and scalable.</p>
+      <div class="actions">
+        <a class="cta" href="#contact">Start Your Project</a>
+        <a class="ghost" href="#services">View Services</a>
+      </div>
+
+      <div style="margin-top:28px" class="card">
+        <div style="font-weight:700;margin-bottom:8px">What we build</div>
+        <div class="services">
+          <div class="service">
+            <div class="icon">📱</div>
+            <h4>Mobile App Development</h4>
+            <p>Native iOS, Android & cross-platform apps with Flutter / React Native — optimized for performance.</p>
+          </div>
+          <div class="service">
+            <div class="icon">🖥️</div>
+            <h4>Web Development</h4>
+            <p>Responsive websites, SPAs, and admin dashboards built with React/Next.js and robust backends.</p>
+          </div>
+          <div class="service">
+            <div class="icon">🎨</div>
+            <h4>Digital Services</h4>
+            <p>UI/UX design, SEO, branding, and maintenance for long-term growth.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <aside>
+      <div class="card">
+        <div style="font-weight:700;margin-bottom:8px">Get a quick estimate</div>
+        <p style="margin:0 0 12px">Tell us the project type and budget and we’ll get back with a free estimate.</p>
+        <form onsubmit="event.preventDefault();alert('Thanks — we will contact you.');" aria-label="Quick estimate">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <select name="type">
+            <option>Mobile App</option>
+            <option>Website</option>
+            <option>UI/UX</option>
+            <option>SEO / Digital</option>
+          </select>
+          <button type="submit">Get Estimate</button>
+        </form>
+      </div>
+
+      <div style="margin-top:14px;text-align:center;font-size:13px;color:var(--muted)">
+        <div style="font-weight:700">Credentials</div>
+        <div>SECP & DUNS registered</div>
+      </div>
+    </aside>
+  </section>
+
+  <section id="services" class="wrap" aria-labelledby="services-title">
+    <h2 id="services-title" style="color:var(--primary)">Services</h2>
+    <p style="color:var(--muted)">Full lifecycle services — concept, design, build, deploy and maintain.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px">
+      <div class="card">
+        <h3>Mobile App Development</h3>
+        <p>Requirement analysis, prototyping, native (Swift/Kotlin) & cross-platform (Flutter/React Native), API integrations, testing, App Store and Google Play deployment and post-launch support.</p>
+        <ul>
+          <li>Performance-first apps</li>
+          <li>Offline capabilities</li>
+          <li>Analytics & A/B testing</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>From marketing sites to complex web apps and admin dashboards. Modern stacks: React/Next.js, Node.js, headless CMS and cloud deployments.</p>
+        <ul>
+          <li>SEO-ready structure</li>
+          <li>Scalable architectures</li>
+          <li>Secure authentication & roles</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>UI/UX Design & Branding</h3>
+        <p>User flows, wireframes, high-fidelity prototypes and brand identity systems that make your product delightful.</p>
+      </div>
+
+      <div class="card">
+        <h3>SEO & Maintenance</h3>
+        <p>Technical SEO, on-page optimization, performance improvements, and SLA-based maintenance & support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="wrap portfolio" aria-labelledby="portfolio-title">
+    <h2 id="portfolio-title" style="color:var(--primary)">Selected Projects</h2>
+    <p style="color:var(--muted)">A snapshot of recent work. Click for details.</p>
+
+    <div class="grid" role="list">
+      <article class="proj" role="listitem">
+        <h5>Project One — Mobile App</h5>
+        <p>Cross-platform app built with Flutter. Improved retention by 28% in 3 months.</p>
+      </article>
+      <article class="proj" role="listitem">
+        <h5>Admin Dashboard — Web App</h5>
+        <p>React + Node.js dashboard for managing logistics and reporting.</p>
+      </article>
+      <article class="proj" role="listitem">
+        <h5>Marketing Website</h5>
+        <p>SEO-optimized marketing site with CMS for easy updates.</p>
+      </article>
+
+      <article class="proj" role="listitem">
+        <h5>Project Four — eCommerce</h5>
+        <p>Headless eCommerce platform with fast checkout and analytics.</p>
+      </article>
+      <article class="proj" role="listitem">
+        <h5>Healthcare App</h5>
+        <p>Secure patient portal with appointment booking and push notifications.</p>
+      </article>
+      <article class="proj" role="listitem">
+        <h5>IoT Dashboard</h5>
+        <p>Real-time device monitoring and alerts with cloud functions.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="wrap about" aria-labelledby="about-title">
+    <div style="flex:1">
+      <h2 id="about-title" style="color:var(--primary)">About Us</h2>
+      <p style="color:var(--muted)">ALBURAAQ E GLOBAL (PRIVATE) LIMITED is a SECP & DUNS registered technology company based in Sargodha, Pakistan. We build mobile and web solutions focused on quality, security and real business results.</p>
+
+      <h3>Mission</h3>
+      <p>To craft reliable, user-centered digital products that help businesses scale and deliver real value to users.</p>
+
+      <h3>Vision & Values</h3>
+      <ul>
+        <li>Quality: Clean code and great UX</li>
+        <li>Transparency: Honest and clear timelines</li>
+        <li>Reliability: On-time delivery & dependable support</li>
+        <li>Innovation: Continuous learning and adopting best tools</li>
+      </ul>
+    </div>
+    <div style="width:420px">
+      <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Team working on product" />
+    </div>
+  </section>
+
+  <section id="testimonials" class="wrap" aria-labelledby="testi-title">
+    <h2 id="testi-title" style="color:var(--primary)">Testimonials</h2>
+    <div class="testimonials">
+      <div class="t-card"><strong>"ALBURAAQ delivered our app on time — excellent UX and performance."</strong><div style="font-size:13px;color:var(--muted);margin-top:8px">— Client Name, Company</div></div>
+      <div class="t-card"><strong>"Highly professional, responsive and great communication."</strong><div style="font-size:13px;color:var(--muted);margin-top:8px">— Client Name</div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="wrap" aria-labelledby="contact-title">
+    <h2 id="contact-title" style="color:var(--primary)">Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <p style="color:var(--muted)">Reach out with project details and we will respond within 24–48 business hours.</p>
+
+        <div class="card" style="margin-top:12px">
+          <h4>Contact Information</h4>
+          <p style="margin:6px 0"><strong>Phone:</strong> <a href="tel:+923468654889">+92 346 865 4889</a></p>
+          <p style="margin:6px 0"><strong>Address:</strong> Aziz Colony, Street No. 7, Main Canal Road, Sargodha, Punjab, Pakistan</p>
+          <p style="margin:6px 0"><strong>Email:</strong> <a href="mailto:info@alburaaq.com">info@alburaaq.com</a></p>
+        </div>
+
+        <div style="margin-top:14px">
+          <h4>Office hours</h4>
+          <p style="color:var(--muted);margin:6px 0">Mon — Fri: 9:00 AM — 6:00 PM (PKT)</p>
+        </div>
+
+        <div style="margin-top:14px">
+          <h4>Find us</h4>
+          <div style="border-radius:8px;overflow:hidden;border:1px solid #eef3f8">
+            <!-- Google Maps iframe: replace src with your own pinned map if you prefer -->
+            <iframe title="ALBURAAQ location" src="https://www.google.com/maps?q=Aziz+Colony+Street+No+7+Main+Canal+Road+Sargodha&output=embed" width="100%" height="260" style="border:0" loading="lazy"></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Send us a message</h3>
+          <form id="contactForm" aria-label="Contact form">
+            <input id="fullname" name="fullname" placeholder="Full name*" required />
+            <input id="company" name="company" placeholder="Company (optional)" />
+            <input id="email" name="email" type="email" placeholder="Email*" required />
+            <input id="phone" name="phone" placeholder="Phone" />
+            <select id="projectType" name="projectType">
+              <option value="Mobile App">Mobile App</option>
+              <option value="Website">Website</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="SEO">SEO</option>
+              <option value="Other">Other</option>
+            </select>
+            <textarea id="message" name="message" rows="4" placeholder="Project brief*" required></textarea>
+            <label style="font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center"><input type="checkbox" id="consent" required/> I agree to the <a href="#privacy">Privacy Policy</a></label>
+            <button type="submit">Send Message</button>
+          </form>
+          <div id="formSuccess" style="display:none;margin-top:12px;padding:10px;border-radius:8px;background:#eefaf6;color:#064e3b">Thank you — we received your message.</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="privacy" class="wrap" aria-labelledby="privacy-title">
+    <h2 id="privacy-title" style="color:var(--primary)">Privacy Policy</h2>
+    <div class="card">
+      <p>This Privacy Policy explains how ALBURAAQ E GLOBAL (PRIVATE) LIMITED ("we", "us", or "our") collects, uses, and protects personal information collected through our website.</p>
+
+      <h4>Information we collect</h4>
+      <ul>
+        <li>Contact details you provide (name, email, phone, company).</li>
+        <li>Technical data (IP address, device and browser info) via analytics.</li>
+        <li>Cookies for session and performance.</li>
+      </ul>
+
+      <h4>How we use your data</h4>
+      <p>We use data to respond to inquiries, deliver services, and improve our website. We do not sell personal data.</p>
+
+      <h4>Third-party services</h4>
+      <p>We may use analytics providers and hosting providers. Check their privacy policies for details.</p>
+
+      <h4>Data retention & security</h4>
+      <p>We retain data only as long as necessary and apply reasonable security measures. To request deletion, contact <a href="mailto:info@alburaaq.com">info@alburaaq.com</a>.</p>
+
+      <p><em>Note: This is a general template and not legal advice. For full compliance (GDPR or other laws), consult a lawyer.</em></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <strong>ALBURAAQ E GLOBAL (PRIVATE) LIMITED</strong>
+      <div style="font-size:13px;color:var(--muted)">Aziz Colony, Street No. 7, Main Canal Road, Sargodha</div>
+    </div>
+
+    <div style="text-align:right">
+      <div style="font-size:13px;color:var(--muted)">Phone: <a href="tel:+923468654889">+92 346 865 4889</a></div>
+      <div style="font-size:13px;color:var(--muted);margin-top:6px">© <span id="yr"></span> ALBURAAQ E GLOBAL. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- JSON-LD Organization -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"ALBURAAQ E GLOBAL (PRIVATE) LIMITED",
+  "url":"https://yourdomain.com",
+  "logo":"https://yourdomain.com/path/to/logo.png",
+  "contactPoint":[{"@type":"ContactPoint","telephone":"+92 346 865 4889","contactType":"customer service","areaServed":"PK","availableLanguage":["English","Urdu"]}],
+  "address":{"@type":"PostalAddress","streetAddress":"Aziz Colony, Street No. 7, Main Canal Road","addressLocality":"Sargodha","addressRegion":"Punjab","addressCountry":"PK"}
+}
+</script>
+
+<!-- Minimal JS for interactions -->
+<script>
+  // set year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',function(e){
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  });
+
+  // contact form behavior (demo)
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    // basic validation
+    const fullname = document.getElementById('fullname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const consent = document.getElementById('consent').checked;
+    if(!fullname||!email||!message||!consent){
+      alert('Please complete all required fields and accept the privacy policy.');
+      return;
+    }
+    // show success (replace with real submission in production)
+    form.style.display='none';
+    document.getElementById('formSuccess').style.display='block';
+  });
+</script>
+
+</body>
+</html>
